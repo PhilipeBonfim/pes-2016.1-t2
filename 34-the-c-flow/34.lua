@@ -45,6 +45,12 @@ function extract_words(path_to_file)
   --return [w for w in word_list if not w in stop_words] if not fail else []
 end
 
+function frequencies(word_list)
+  local word_freq = {}
+  if type(word_list) == "table" and word_list ~= nil then
+    for w in word_list do
+      if w in word_list then
+        
 
 --Checa se recebeu como parâmetro o nome espécifico do arquivo a ser lido.
 --Caso não tenha recebido lê do araquivo "../input.txt"
